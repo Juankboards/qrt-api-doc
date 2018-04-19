@@ -13,7 +13,8 @@ To get Number of Tokens Available, Neo/XQT rate, GAS/XQT rate and number of toke
         tokensAvailable: integer,
         neoRate: integer,
         gasRate: integer,
-        tokensSold: integer
+        tokensSold: integer,
+        initialSaleAmount: 73500000
       }
     }
 
