@@ -10,18 +10,20 @@ To get Number of Tokens Available, Neo/XQT rate, GAS/XQT rate and number of toke
 
     {
       "result": {
-    tokensAvailable: integer,
-    neoRate: integer,
-    gasRate: integer,
-    tokensSold: integer
+        tokensAvailable: integer,
+        neoRate: integer,
+        gasRate: integer,
+        tokensSold: integer
       }
     }
+    
 #### Error response
 
 500
-    {
-      "result": error
-    }
+
+{
+  "result": error
+}
 
 ### GET https://api.quarteria.io/v1/getAddressInfo?address=USER_ADDRESS
 
@@ -35,18 +37,20 @@ USER_ADDRESS = user NEO wallet address (i.e APyEx5f4Zm4oCHwFWiSTaph1fPBxZacYVR)
 
     {
       "result": {
-    balance: integer,
-    neo: integer,
-    gas: integer,
-    isRegistered: integer (zero or one)
+        balance: integer,
+        neo: integer,
+        gas: integer,
+        isRegistered: integer (zero or one)
       }
     }
+
 #### Error response
 
 500
-    {
-      "result": error
-    }
+
+{
+  "result": error
+}
 
 ### POST https://api.quarteria.io/v1/register
 
@@ -71,9 +75,10 @@ To register an user
 #### Error response
 
 500
-    {
-      "result": error
-    }
+
+{
+  "result": error
+}
 
 ### PUT https://api.quarteria.io/v1/emailVerification?code=UNIQUE_VERIFICATION_CODE
 
@@ -92,9 +97,10 @@ UNIQUE_VERIFICATION_CODE = code generated in the user's registration.
 #### Error response
 
 400
-    {
-      "result": "Invalid link"
-    }
+
+{
+  "result": "Invalid link"
+}
 
 ### GET https://api.quarteria.io/v1/resendVerificationEmail?email=USER_EMAIL
 
@@ -112,16 +118,18 @@ To resend the verification email
 if USER_MAIL was not provided
 
 400
-    {
-      "result": "Invalid request"
-    }
+
+{
+  "result": "Invalid request"
+}
 
 if USER_MAIL was not found on DB
 
 400
-    {
-      "result": "Email not registered"
-    }
+
+{
+  "result": "Email not registered"
+}
 
 ### GET https://api.quarteria.io/v1/unique?email=USER_EMAIL
 
@@ -131,16 +139,17 @@ To check if email already registered
 
 200
 
-    {
-      result: boolean
-    }
+{
+  result: boolean
+}
   
 #### Error response
 
 500
-    {
-      "result": error
-    }
+
+{
+  "result": error
+}
 
 ### POST https://api.quarteria.io/v1/login
 
@@ -162,13 +171,16 @@ To sign in an user
 #### Error response
 
 401
-    {
-      "result": "User not registered"
-    }
+
+{
+  "result": "User not registered"
+}
+
 401
-    {
-      "result": "Password did not match"
-    }
+
+{
+  "result": "Password did not match"
+}
 
 ### GET https://api.quarteria.io/v1/validPasswordRecovery?code=UNIQUE_VERIFICATION_CODE
 
@@ -180,16 +192,17 @@ UNIQUE_VERIFICATION_CODE = code generated when user reuest password recovery
 
 200
 
-    {
-      result: boolean
-    }
+{
+  result: boolean
+}
   
 #### Error response
 
 400
-    {
-      "result": false
-    }
+
+{
+  "result": false
+}
 
 ### PUT https://api.quarteria.io/v1/passwordReset?code=UNIQUE_VERIFICATION_CODE
 
@@ -201,16 +214,17 @@ UNIQUE_VERIFICATION_CODE = code generated when user reuest password recovery
 
 200
 
-    {
-      result: "Password changed"
-    }
+{
+  result: "Password changed"
+}
   
 #### Error response
 
 400
-    {
-      "result": "Invalid link"
-    }
+
+{
+  "result": "Invalid link"
+}
 
 ### POST https://api.quarteria.io/v1/forgotPassword
 
@@ -226,24 +240,26 @@ To request password reset and send email with recovery code
 
 200
 
-    {
-      result: "Email sent"
-    }
+{
+  result: "Email sent"
+}
   
 #### Error response
 When cannot send email
 
 400
-    {
-      "result": "An error occurred while sending email"
-    }
+
+{
+  "result": "An error occurred while sending email"
+}
 
 When use an invalid email in the request
 
 400
-    {
-      "result": "Invalid email"
-    }
+
+{
+  "result": "Invalid email"
+}
 
 ### GET https://api.quarteria.io/v1/logged
 
@@ -256,7 +272,7 @@ To check if an user session is active
 
     {
       result: {
-    name: string,
+        name: string,
         email: string
       }
     }
