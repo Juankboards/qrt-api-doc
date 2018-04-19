@@ -10,13 +10,13 @@ To get Number of Tokens Available, Neo/XQT rate, GAS/XQT rate and number of toke
 
     {
       "result": {
-	tokensAvailable: integer,
-	neoRate: integer,
-	gasRate: integer,
-	tokensSold: integer
+    tokensAvailable: integer,
+    neoRate: integer,
+    gasRate: integer,
+    tokensSold: integer
       }
     }
-### Error response
+#### Error response
 
 500
     {
@@ -35,13 +35,13 @@ USER_ADDRESS = user NEO wallet address (i.e APyEx5f4Zm4oCHwFWiSTaph1fPBxZacYVR)
 
     {
       "result": {
-	balance: integer,
-	neo: integer,
-	gas: integer,
-	isRegistered: integer (zero or one)
+    balance: integer,
+    neo: integer,
+    gas: integer,
+    isRegistered: integer (zero or one)
       }
     }
-### Error response
+#### Error response
 
 500
     {
@@ -68,7 +68,7 @@ To register an user
       result: "User stored. You will recieve an email to confirm your registration"
     }
   
-### Error response
+#### Error response
 
 500
     {
@@ -89,7 +89,7 @@ UNIQUE_VERIFICATION_CODE = code generated in the user's registration.
       result: "Email confirmed"
     }
   
-### Error response
+#### Error response
 
 400
     {
@@ -108,7 +108,7 @@ To resend the verification email
       result: "Verification email sent"
     }
   
-### Error response
+#### Error response
 if USER_MAIL was not provided
 
 400
@@ -135,7 +135,7 @@ To check if email already registered
       result: boolean
     }
   
-### Error response
+#### Error response
 
 500
     {
@@ -159,7 +159,7 @@ To sign in an user
       result: "User stored. You will recieve an email to confirm your registration"
     }
   
-### Error response
+#### Error response
 
 401
     {
@@ -184,7 +184,7 @@ UNIQUE_VERIFICATION_CODE = code generated when user reuest password recovery
       result: boolean
     }
   
-### Error response
+#### Error response
 
 400
     {
@@ -205,7 +205,7 @@ UNIQUE_VERIFICATION_CODE = code generated when user reuest password recovery
       result: "Password changed"
     }
   
-### Error response
+#### Error response
 
 400
     {
@@ -230,7 +230,7 @@ To request password reset and send email with recovery code
       result: "Email sent"
     }
   
-### Error response
+#### Error response
 When cannot send email
 
 400
@@ -256,12 +256,12 @@ To check if an user session is active
 
     {
       result: {
-	name: string,
+    name: string,
         email: string
       }
     }
   
-### Error response
+#### Error response
 
 400
 
@@ -280,7 +280,7 @@ To logout an user
       result: "logout"
     }
   
-### Error response
+#### Error response
 
 400
 
