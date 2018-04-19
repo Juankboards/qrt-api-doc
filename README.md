@@ -74,7 +74,12 @@ To register an user
     }
   
 #### Error response
+400
 
+    {
+      "result": "Email is already registered"
+    }
+    
 500
 
     {
