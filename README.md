@@ -215,7 +215,13 @@ UNIQUE_VERIFICATION_CODE = code generated when user reuest password recovery
 
 To reset the user's password
 
-UNIQUE_VERIFICATION_CODE = code generated when user reuest password recovery
+UNIQUE_VERIFICATION_CODE = code generated when user reqest password recovery
+
+#### Expected request parameters
+
+    {
+      password: string
+    }
 
 #### Expected response
 
